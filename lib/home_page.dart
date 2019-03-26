@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:mr_flutter/utils/uidata.dart';
 
+
 class Home extends StatelessWidget {
 	@override
   Widget build(BuildContext context) {
+		var _splash_color = Colors.deepPurpleAccent;
     // TODO: implement build
     return new Scaffold(
 	    appBar: AppBar(
-		    title: Text(' PAYMENTS ', style: TextStyle(color: Colors.black, letterSpacing: 25, fontSize: 32, fontFamily: UIData.quickFont, ),),
+		    elevation: 4.0,
+			centerTitle: true,
+//		    backgroundColor: Color.fromRGBO(41, 98, 255, 100)
+		    title: Text('PAYMENTS', style: TextStyle(color: Colors.black, letterSpacing: 25, fontSize: 32, fontFamily: UIData.quickFont, ),),
 	        backgroundColor: Colors.white,
 	    ),
 	    body: Center(
@@ -19,7 +24,7 @@ class Home extends StatelessWidget {
 						    child: Row(
 							    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 							    children: <Widget>[
-							    	Icon(Icons.payment, color: Colors.black,),
+							    	Icon(Icons.payment, color: Colors.black,size: 40,),
 									Container(
 										width: 300,
 									  child: TextFormField(
@@ -27,9 +32,9 @@ class Home extends StatelessWidget {
 										  border: OutlineInputBorder(),
 										  labelText: ' Amount ',
 									  	prefixText: '\$ ',
-									  	prefixStyle: TextStyle(color: Colors.green),
+									  	prefixStyle: TextStyle(color: Colors.blue),
 									  	suffixText: 'USD',
-									  	suffixStyle: TextStyle(color: Colors.green),
+									  	suffixStyle: TextStyle(color: Colors.blue),
 									  ),
 //									  	maxLines: 1,
 									  ),
@@ -50,7 +55,7 @@ class Home extends StatelessWidget {
 												onTap: () {
 													Navigator.of(context).pushNamed('/Card');
 												},
-											    splashColor: Colors.deepPurpleAccent,
+											    splashColor: _splash_color,
 											    child: new Center(
 												    child: Text('Credit Card', style: TextStyle(
 													    color: Colors.black, letterSpacing: 4, fontSize: 26, fontFamily: UIData.quickFont, ),),
@@ -67,7 +72,7 @@ class Home extends StatelessWidget {
 											    onTap: () {
 												    Navigator.of(context).pushNamed('/Card');
 											    },
-											    splashColor: Colors.deepPurpleAccent,
+											    splashColor: _splash_color,
 											    child: new Center(
 												    child: Text('Debit Card', style: TextStyle(
 													    color: Colors.black, letterSpacing: 4, fontSize: 26, fontFamily: UIData.quickFont, ),),
@@ -84,7 +89,7 @@ class Home extends StatelessWidget {
 											    onTap: () {
 												    print('Tapped');
 											    },
-											    splashColor: Colors.deepPurpleAccent,
+											    splashColor: _splash_color,
 											    child: new Center(
 												    child: Text('Internet Banking', style: TextStyle(
 													    color: Colors.black, letterSpacing: 4, fontSize: 26, fontFamily: UIData.quickFont, ),),
@@ -101,7 +106,7 @@ class Home extends StatelessWidget {
 											    onTap: () {
 												    print('Tapped');
 											    },
-											    splashColor: Colors.deepPurpleAccent,
+											    splashColor: _splash_color,
 											    child: new Center(
 												    child: Text('Google Pay', style: TextStyle(
 													    color: Colors.black, letterSpacing: 4, fontSize: 26, fontFamily: UIData.quickFont, ),),
@@ -118,7 +123,7 @@ class Home extends StatelessWidget {
 											    onTap: () {
 												    print('Tapped');
 											    },
-											    splashColor: Colors.deepPurpleAccent,
+											    splashColor: _splash_color,
 											    child: new Center(
 												    child: Text('Other', style: TextStyle(
 													    color: Colors.black, letterSpacing: 4, fontSize: 26, fontFamily: UIData.quickFont, ),),

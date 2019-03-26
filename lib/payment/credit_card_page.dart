@@ -56,8 +56,8 @@ class CreditCardPage extends StatelessWidget {
 								),
 							),
 							Positioned(
-								right: 10.0,
-								bottom: 10.0,
+								right: 15.0,
+								bottom: 15.0,
 								child: StreamBuilder<String>(
 									stream: cardBloc.nameOutputStream,
 									initialData: "Your Name",
@@ -66,7 +66,7 @@ class CreditCardPage extends StatelessWidget {
 										style: TextStyle(
 												color: Colors.white,
 												fontFamily: UIData.ralewayFont,
-												fontSize: 20.0),
+												fontSize: 25.0),
 									),
 								),
 							),
@@ -194,9 +194,11 @@ class CreditCardPage extends StatelessWidget {
 	Widget floatingBar() => Ink(
 		decoration: ShapeDecoration(
 				shape: StadiumBorder(),
-				gradient: LinearGradient(colors: UIData.kitGradients)),
+				gradient: LinearGradient(colors: UIData.kitGradients2)),
 		child: FloatingActionButton.extended(
-			onPressed: () {},
+			onPressed: () {
+				print('im in');
+				},
 			backgroundColor: Colors.transparent,
 			icon: Icon(
 				FontAwesomeIcons.paypal,

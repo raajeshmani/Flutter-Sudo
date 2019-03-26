@@ -29,7 +29,7 @@ class PaymentsApp extends StatelessWidget {
 			debugShowCheckedModeBanner: false,
 			showPerformanceOverlay: false,
 			theme: ThemeData(
-				primarySwatch: Colors.deepPurple,
+				primarySwatch: Colors.blue,
 			),
 			routes: <String, WidgetBuilder> {
 				'/Home': (BuildContext context) => new Home(),
