@@ -3,6 +3,7 @@ import 'package:mr_flutter/payment/credit_card_page.dart';
 import 'package:mr_flutter/utils/uidata.dart';
 import 'package:mr_flutter/home_page.dart';
 import 'package:flutter/rendering.dart';
+import 'package:mr_flutter/payment/payment_page.dart';
 
 
 void main() {
@@ -34,6 +35,7 @@ class PaymentsApp extends StatelessWidget {
 			routes: <String, WidgetBuilder> {
 				'/Home': (BuildContext context) => new Home(),
 				'/Card': (BuildContext context) => new CreditCardPage(),
+				'/Payment': (BuildContext context) => new PaymentPage(),
 			},
 			home: Home(),
     );
